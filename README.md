@@ -22,8 +22,8 @@ Assumes that you already have Virtual Network Setup with NSGs assigned to the VN
     $resourceGroupName = 'PROD-FILESERVER01-RG'
     $location = 'eastus"
     $tag = @{ Environment = 'PROD'; Portfolio = 'FinanceDept'; Application = 'FileServer';  }
-    $templateFilePath = '<Path>\template-ServerName01.json'
-    $parametersFilePath = '<Path>\parameters-ServerName01.json'
+    $templateFilePath = '<Path>\azuredeploy.json'
+    $parametersFilePath = '<Path>\azuredeploy.parameters.json'
 
     # Connect to Azure
     Connect-AzAccount -Tenant $tenant -Subscription $subscription
