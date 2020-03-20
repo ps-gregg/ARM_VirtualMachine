@@ -1,0 +1,50 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "value": "ServerName01"
+        },
+        "vmMachineSize": {
+            "value": "Standard_D1_v2"
+        },
+        "vmDataDisks": {
+            "value": 1
+        },
+        "Environment": {
+            "value": "PROD-APP-EAST"
+        },
+        "localAdminUsername": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/NameofResourcecGroup/providers/Microsoft.KeyVault/vaults/NameofKeyVault"
+                },
+                "secretName": "localadminName"
+            }
+        },
+        "localAdminPassword": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/NameofResourcecGroup/providers/Microsoft.KeyVault/vaults/NameofKeyVault"
+                },
+                "secretName": "localadminPass"
+            }
+        },
+        "domainJoinUsername": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/NameofResourcecGroup/providers/Microsoft.KeyVault/vaults/NameofKeyVault"
+                },
+                "secretName": "domainadminName"
+            }
+        },
+        "domainJoinPassword": {
+            "reference": {
+                "keyVault": {
+                "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/NameofResourcecGroup/providers/Microsoft.KeyVault/vaults/NameofKeyVault"
+                },
+                "secretName": "domainadminPass"
+            }
+        }
+    }
+}
