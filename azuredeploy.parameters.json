@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vmName": {
-            "value": "ServerName01"
+            "value": "servername01"
         },
         "vmMachineSize": {
             "value": "Standard_D1_v2"
